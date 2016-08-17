@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Página Teste</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+	
+	<body>
+	
+		<h1>Primeiro Cabecalho.</h1>
+		
+		<h2>Segundo Cabecalho.</h2>
+		
+		<h3>Terceiro Cabecalho.</h3>
+		
+		<h4>Quarto Cabecalho.</h4>
+		
+		<h5>Quinto Cabecalho.</h5>
+		
+		<h6>Sexto Cabecalho.</h6>
+		
+		
+		<p> Primeiro Paragrafo.</p>
+		
+		<img src="img/dia-crianca-feliz-0109.jpg" title="Primeira imagem" />
+		
+		<a href="http://marvel.com/" target="blank">Primeiro Link</a>
+		
+		<table>
+			<caption>Descricao da Tabela</caption>
+			<thead>
+				<tr>
+					<th>Coluna 1</th>
+					<th>Coluna 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Linha 1 - Coluna 1</td>
+					<td>Linha 1 - Coluna 2</td>
+				</tr>
+				<tr>
+					<td>Linha 2 - Coluna 1</td>
+					<td>Linha 2 - Coluna 2</td>
+				</tr>
+				<tr>
+					<td>Linha 3 - Coluna 1</td>
+					<td>Linha 3 - Coluna 2</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h2>Lista Ordenada</h2>
+			<ol>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ol>
+	
+		<h2>Lista Nao Ordenada</h2>
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+		
+		
+		<form action="/cadastro/" method="post">
+			<label>Login:</label>
+			<input type="text" name="login" placeholder="Digite seu login">
+			<label>Password:</label>
+			<input type="password" name="senha">
+			
+			<input type="radio" name=sexo" value="1" checked>
+			masculino
+			<input type="radio" name=sexo" value="2">
+			feminino
+			
+			
+			Curso
+			<select name="curso">
+				<option value="1">Ciencia da Computacao</option>
+				<option value="2">Direito</option>
+				<option value="3">Engenharia Eletrica</option>
+				<option value="4">Medicina</option>
+			</select>
+			
+			Mensagem: <textarea name="message" rows="10" cols="30"></textarea> 
+			
+			<input type="checkbox" name="veiculo1" value="bike"> Eu tenho uma bike
+			<input type="checkbox" name="veiculo2" value="carro"> Eu tenho um carro
+			
+			<label>Idade: </label>
+			<input type="number" name="idade" min="0" max="100" step="1" value="30">
+			
+			
+				
+			<label>Data de nascimento: </label>
+			<input type="date" name="data_nascimento" min="2000-01-02">
+			
+			<label>Auto complete: </label>
+			<input list="cheeses">
+			<datalist id="cheeses">
+				<option>Camembert</option>
+				<option>Parmesao</option>
+				<option>Branco</option>
+				<option>Requeijao</option>
+				<option>Mussarela</option>
+				<option>Prato</option>
+			</datalist>
+			
+			<!-- codigo novo -->
+			
+			<input type="hidden" name="country" value="Brasil">
+
+			<input type="reset" value="Limpar">
+			<input type="submit" value="Enviar">
+			<button type="button" onclick="alert('Você Ganhou 10.000!')">Click!</button>
+
+			<div id="area-mensagem">
+				elementos de bloco
+			</div>
+
+			Elementos <span class="destaque"> de </span> linha
+			
+			<!-- fim codigo novo -->
+			
+				
+		</form>
+	
+	</body>
+</html>
