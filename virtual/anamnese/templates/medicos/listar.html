@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista de Médicos cadastrados</title>
+  </head>
+  <body>
+    <ul>
+      {% for medico in object_list %}
+        <li>
+         {{ medico }}
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
