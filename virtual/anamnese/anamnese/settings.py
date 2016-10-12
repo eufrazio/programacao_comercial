@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'index.apps.IndexConfig',
     'login.apps.LoginConfig',
     'pacientes.apps.PacientesConfig',
     'medicos.apps.MedicosConfig',
@@ -130,5 +131,7 @@ DATE_INPUT_FORMATS = ('%d/%m/%Y',)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (BASE_DIR.child('static'),)
+STATICFILES_DIRS = (BASE_DIR.child('static'),
+	"/home/eufrazio/Documentos/ProgramacaoComercial/virtual/anamnese/login/static",
+	"/home/eufrazio/Documentos/ProgramacaoComercial/virtual/anamnese/index/static",)
 STATIC_ROOT = BASE_DIR.parent.child('static')
