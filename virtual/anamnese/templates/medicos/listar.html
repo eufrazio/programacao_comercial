@@ -1,9 +1,9 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Lista de Médicos cadastrados</title>
-  </head>
-  <body>
+{% extends "index/index.html" %}
+
+  {% block content %}
+
+  <h1>Adicionar medico</h1>
+
     <ul>
       {% for medico in object_list %}
         <li>
@@ -11,5 +11,5 @@
         </li>
       {% endfor %}
     </ul>
-  </body>
-</html>
+
+  {% endblock content %}
