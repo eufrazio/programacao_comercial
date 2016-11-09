@@ -1,0 +1,66 @@
+{% extends "index/index.html" %}
+
+{% block title %} <title> Adicionar Paciente </title> {% endblock %}
+
+
+  {% block content %}
+
+  <h1>Adicionar Paciente</h1>
+
+  	<div class="container"
+ 	    <form action="/pacientes/novo/" method="post">
+	      {% csrf_token %}
+
+
+			<div class="row center-block" >
+			  <div class="col-lg-12" >
+	      		{{ form.nome }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.idade }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.sexo }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.data_nascimento }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.estado_civil }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.profissao }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.endereco }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.medico_responsavel }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.alergia }}
+			  </div><!-- /.col-lg-9 -->
+
+			  <div class="col-lg-6">
+	      		{{ form.uso_medicamento }}
+			  </div><!-- /.col-lg-9 -->
+			</div><!-- /.row -->
+
+			<div class="col-lg-3" style="position: absolute;right: 50%;">
+	      		<input type="submit" value="Salvar" />
+			</div><!-- /.col-lg-9 -->
+	      	
+	    </form>
+	</div>
+
+
+
+  {% endblock content %}

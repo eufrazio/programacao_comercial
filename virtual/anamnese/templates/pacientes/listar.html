@@ -1,0 +1,17 @@
+{% extends "index/index.html" %}
+
+{% block title %} <title> Listar Pacientes </title> {% endblock %}
+
+  {% block content %}
+
+  <h1>Adicionar Paciente</h1>
+
+    <ul>
+      {% for paciente in object_list %}
+        <li>
+         {{ paciente }}
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endblock content %}
