@@ -38,6 +38,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'index.apps.IndexConfig',
+    'consultas.apps.ConsultasConfig',
     'login.apps.LoginConfig',
     'pacientes.apps.PacientesConfig',
     'medicos.apps.MedicosConfig',

@@ -1,10 +1,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Alterar médico</title>
+    <title>Alterar Paciente</title>
   </head>
   <body>
-    <form action="/medicos/{{ object.pk }}/" method="post">
+    <form action="/pacientes/{{ object.pk }}/" method="post">
       {% csrf_token %}
       {{ form }}
       <input type="submit" value="Salvar" />

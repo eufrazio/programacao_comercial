@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^consultas/', include('consultas.urls')),
     url(r'^login/', include('login.urls')),
     url(r'^medicos/', include('medicos.urls')),
     url(r'^pacientes/', include('pacientes.urls')),

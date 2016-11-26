@@ -1,13 +1,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Excluir médico</title>
+    <title>Excluir Paciente</title>
   </head>
   <body>
-    <form action="/medicos/excluir/{{ object.pk }}/" method="post">
+    <form action="/pacientes/excluir/{{ object.pk }}/" method="post">
       {% csrf_token %}
       <p>
-        Tem certeza que deseja excluir o médico "{{ object }}" ?
+        Tem certeza que deseja excluir o paciente "{{ object }}" ?
       </p>
       <input type="submit" value="Confirmar" />
     </form>

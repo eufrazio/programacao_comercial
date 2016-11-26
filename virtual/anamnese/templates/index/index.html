@@ -31,6 +31,12 @@
 	<!-- template skin -->
 	<link id="t-colors" href="{% static '/bootstrap/color/default.css' %}" rel="stylesheet">
 
+	<!-- plugin date picker -->
+	<link rel="stylesheet" href="{% static '/bootstrap/plugins/datepicker/datepicker3.css' %}">
+  	<!-- Daterange picker -->
+  	<link rel="stylesheet" href="{% static '/bootstrap/plugins/daterangepicker/daterangepicker.css' %}">
+
+
 
 </head>
 
@@ -57,7 +63,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/index/">
+                <a class="navbar-brand" href="/login/">
                     <img src="{% static '/bootstrap/img/Anamnese.png' %}" alt="" width="230" height="55" />
                 </a>
             </div>
@@ -65,8 +71,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="/index/">Início</a></li>
-				<li><a href="#service">Diagnósticos</a></li>
+				<li><a href="/login/">Início</a></li>
+				<li><a href="/consultas/listar/">Diagnósticos</a></li>
 				<li><a href="/medicos/listar/">Médicos</a></li>
 				<li><a href="/pacientes/listar/">Pacientes</a></li>
 				<li><a href="/admin/">Sintomas</a></li>
@@ -88,7 +94,7 @@
 
 	<!--Inclusão de background -->
 	
-	<section class="featured">
+<!-- 	<section class="featured">
 			<div class="container"> 
 				<div class="row mar-bot40">
 					<div class="col-md-6 col-md-offset-3">
@@ -104,11 +110,23 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
+
+	<section id="intro" class="intro">
+        <div class="intro-content">
+            <div class="container">
+                <div class="row">
+                	<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
 	
 	{% block content %}
 
     {% endblock %}
+
+    				</div>
+    			</div>      
+            </div>
+        </div>      
+    </section>
 	
 
 	<footer>
@@ -229,6 +247,19 @@
 	<script src="{% static '/bootstrap/js/owl.carousel.min.js' %}"></script>
 	<script src="{% static '/bootstrap/js/nivo-lightbox.min.js' %}"></script>
     <script src="{% static '/bootstrap/js/custom.js' %}"/></script>
+    <script src="{% static '/bootstrap/plugins/daterangepicker/daterangepicker.js' %}"></script>
+	<!-- datepicker -->
+	<script src="{% static '/bootstrap/plugins/datepicker/bootstrap-datepicker.js' %}"></script>
+	<!-- funcao js -->
+	<script>
+        jQuery(function($){
+          $(".datas").mask("99/99/9999");
+        });
+    </script>
+
+    
+
+
 
 
 </body>
