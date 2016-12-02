@@ -7,15 +7,13 @@ from django.shortcuts import render_to_response
 
 # Create your views here.
 
-class ConsultasList(ListView):
-  """
-  View para listar consultas.
-  """
-  model = Pergunta
-  template_name = 'consultas/listar.html'
-  success_url = reverse_lazy('listar-perguntas')
+# class ConsultasList(ListView):
+#   """
+#   View para listar consultas.
+#   """
+#   model = Pergunta
+#   template_name = 'consultas/listar.html'
+#   success_url = reverse_lazy('listar-perguntas')
 
-def diagnostico(request): #fazer logica do diagnostico aqui
-    message = 'Prestou!'
-    print message   
-    return render(request, 'consultas/listar.html')
+def diagnostico(request): #fazer logica do diagnostico aqui  
+	return render(request, 'consultas/listar.html')

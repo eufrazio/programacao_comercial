@@ -1,5 +1,7 @@
 {% extends "index/index.html" %}
 
+{% load bootstrap3 %}
+
 {% block title %} <title> Adicionar Médico </title> {% endblock %}
 
 
@@ -7,11 +9,13 @@
 
   <h1>Adicionar médico</h1>
 
-  		<div class="container">
- 	    <form action="/medicos/novo/" method="post">
+ 	    <form class="form col-sm-4" action="/medicos/novo/" method="post">
 	      {% csrf_token %}
-	      		{{ form.as_p }}
-	      		<input type="submit" value="Salvar" />
+	      {% bootstrap_form form %}
+	      {% buttons %}
+            <button type="submit" class="btn btn-primary">{% bootstrap_icon "plus-sign" %} Salvar</button>
+			{% endbuttons %}
+	      		<!-- <input type="submit" value="Salvar" /> -->
 	    </form>
 
 

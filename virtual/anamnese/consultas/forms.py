@@ -6,9 +6,8 @@ class Perguntas(forms.ModelForm):
   """
   Formulario para o model Medico
   """
-
   class Meta:
-    model = Pergunta
+    model = Sintoma
     exclude = []
 
   def __init__(self, *args, **kwargs):
