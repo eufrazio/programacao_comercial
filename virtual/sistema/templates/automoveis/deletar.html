@@ -1,0 +1,15 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Excluir veículo</title>
+	</head>
+	<body>
+		<form action="/automoveis/excluir/{{ object.pk }}/" method="post">
+			{% csrf_token %}
+			<p>
+			Tem certeza que deseja excluir o automóvel "{{ object }}" ?
+			</p>
+			<input type="submit" value="Confirmar" />
+		</form>
+	</body>
+</html>
