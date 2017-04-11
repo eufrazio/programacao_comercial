@@ -16,7 +16,11 @@ function minhaFuncao2(){
 };
 
 function minhaFuncao3(){
+<<<<<<< HEAD
 	$('#area-02').empty();
+=======
+	$('#area-02').empty();//Remove todos os elementos filhos daquele ID 
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
 	var alunos = [
 		{
 			nome: 'Maria',
@@ -48,4 +52,30 @@ function minhaFuncao3(){
 	$.each(alunos, function(index, value) {
 	list.append('<li>' + value.nome + ' - ' + value.idade + '</li>')});
 
+<<<<<<< HEAD
 };
+=======
+};
+
+function minhaFuncao4(){
+    $("p").dblclick(function(){
+        $(this).hide();
+    });
+};
+
+$(document).ready(function(){//quando a página é levantada é chamada a função 4
+	minhaFuncao4();
+});
+
+
+function minhaFuncao5(){
+	$("#p1").mouseenter(function(){
+    	alert("You entered p1!");
+	});
+};
+
+$(document).ready(function(){//quando a página é levantada é chamada a função 4
+	minhaFuncao5();
+});
+
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102

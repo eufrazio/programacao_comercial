@@ -1,5 +1,9 @@
 body{
+<<<<<<< HEAD
 		background-color: #ff0000;
+=======
+		background-color: #DEB887;
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
 }
 
 h1{
@@ -9,7 +13,11 @@ h1{
 
 p{
 	font-family:verdana;
+<<<<<<< HEAD
 	font-size:20px;
+=======
+	font-size:50px;
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
 }
 
 th, td{
@@ -33,4 +41,21 @@ tr:hover {background-color:#0000ff}
 	text-transform: uppercase;
 	font-size:30px;
 	color:#00ff00;
+<<<<<<< HEAD
+=======
+}
+
+#p01 {
+    text-transform: uppercase;
+	font-size:30px;
+	color:#228B22;
+}
+
+.destacando{
+	text-decoration: line-through;\\line-through, overline, underline
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-shadow: 4px 4px 8px black; 
+	font-size: 80px;
+	color:#228B22;
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
 }

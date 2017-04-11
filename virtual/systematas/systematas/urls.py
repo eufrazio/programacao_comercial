@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-"""sistema URL Configuration
+"""systematas URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,16 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-
->>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
-from django.conf.urls import include, url
+from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-<<<<<<< HEAD
-    url(r'^veiculos/', include('veiculos.urls')),
-=======
-    url(r'^automoveis/', include('automoveis.urls')),
->>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
     url(r'^admin/', admin.site.urls),
 ]

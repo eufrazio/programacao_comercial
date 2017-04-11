@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lista de Automóveis cadastrados</title>
+	</head>
+	<body>
+		<ul>
+		{% for x in object_list %}
+			<li>
+				<a href="/automoveis/{{automovel.pk}}">
+					{{ x }}
+				</a>
+
+				<a href="/automoveis/excluir/{{automovel.pk}}">
+				</a>
+
+			</li>
+		{% endfor %}
+		</ul>
+	</body>
+</html>

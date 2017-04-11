@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Alterar automóvel</title>
+	</head>
+	<body>
+		<form action="/automoveis/{{ object.pk }}/" method="post">
+			{% csrf_token %}
+			{{ form }}
+			<input type="submit" value="Salvar" />
+		</form>
+	</body>
+</html>

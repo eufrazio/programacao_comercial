@@ -9811,4 +9811,8 @@ if ( !noGlobal ) {
 }
 
 return jQuery;
+<<<<<<< HEAD
 }));
+=======
+}));
+>>>>>>> 8598cccb4ba590c38f0f27f6f09a527584cc9102
