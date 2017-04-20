@@ -1,48 +1,96 @@
-{% extends "base/index.html" %}
+{% load staticfiles %}
 
-{% block title %} <title> Início </title> {% endblock %}
 
-    {% block content %}
+{% block head %}{% endblock %}
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {% block title %} <title>Atas</title>{% endblock %}
+    
+    <!-- css -->
+    <link href="{% static '/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static '/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/bootstrap/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/bootstrap/plugins/cubeportfolio/css/cubeportfolio.min.css' %}" rel="stylesheet" >
+    <link href="{% static '/bootstrap/css/nivo-lightbox.css' %}" rel="stylesheet" />
+    <link href="{% static '/bootstrap/css/nivo-lightbox-theme/default/default.css' %}" rel="stylesheet" />
+    <link href="{% static '/bootstrap/css/owl.carousel.css' %}" rel="stylesheet" media="screen" />
+    <link href="{% static '/bootstrap/css/owl.theme.css' %}" rel="stylesheet" media="screen" />
+    <link href="{% static '/bootstrap/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static '/bootstrap/css/style.css' %}" rel="stylesheet">
+
+    <!-- boxed bg -->
+    <link id="bodybg" href="{% static '/bootstrap/bodybg/bg1.css' %}" rel="stylesheet" type="text/css" />
+    <!-- template skin -->
+    <link id="t-colors" href="{% static '/bootstrap/color/default.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
         <!-- Section: intro -->
 
 
-        <div class="col-lg-6">
-            <div class="form-wrapper">
-                <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-                
-                    <div class="panel panel-skin">
-                        <div class="panel-heading">
-                                <h3 class="panel-title"><span class="fa fa-sign-in"></span> Entrar</h3>
-                        </div>
-                            <div class="panel-body">
-                                <form action="" method="post" role="form" class="lead">{% csrf_token %}
-                                    <div class="row">
-                                        <div class="col-xs-6 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <label>Usuário</label>
-                                                <input type="text" name="username" value="{{login}}" id="first_name" class="form-control input-md">
-                                            </div>
-                                        </div>
-                                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                                <div class="form-group">
-                                                    <label>Senha</label>
-                                                    <input type="password" name="password" id="senha" class="form-control input-md">
-                                                </div>
-                                            </div>
-                                    </div>
-
-                                                
-                                        <input type="submit" value="Entrar" class="btn btn-skin btn-block btn-lg">
-                                        
-                                        <p class="lead-footer">*</p>
-                                            
-                                </form>
-                            </div>
-                    </div>              
-                            
+    <div class="top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                <p class="bold text-left"></p>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                <p class="bold text-right"></p>
                 </div>
             </div>
-        </div>                 
-  
-    {% endblock content %}
+        </div>
+    </div>
+
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="form-wrapper">
+            <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                
+                <div class="panel-heading">
+                    <img src="{% static '/bootstrap/img/atas.png' %}" alt="" width="150" height="60" />
+                </div>
+
+                <div class="panel-body">
+                    <form action="" method="post" role="form" class="lead">{% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Usuário</label>
+                                <input type="text" name="username" value="{{login}}" id="first_name" class="form-control input-md">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <label>Senha</label>
+                                <input type="password" name="password" id="senha" class="form-control input-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <input type="submit" value="Entrar" class="btn btn-skin btn-block btn-lg">
+                    
+                    <!--<p class="lead-footer">* ononon.</p>-->
+                
+                    </form>
+                </div>
+            
+            </div>
+            </div>
+        </div>    
+
+</body>
+
+</html>

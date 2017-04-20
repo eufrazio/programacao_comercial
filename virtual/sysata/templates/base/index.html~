@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+<!--
+  <link REL="SHORTCUT ICON" HREF="bootstrap/img/atas2.ico"  type="image/x-icon">
+
+-->
+  <link rel="ICON" type="x-icon" href="bootstrap/img/atas3.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Sistema de Atas e Pautas</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/style.css" rel="stylesheet">
+</head>
+<body>
+  
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <!--<img src="bootstrap/img/atas3.ico"/>-->
+          <img id="brand-image" alt="" src="bootstrap/img/atas3.ico"/>
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"> <a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <!-- jQuery (necessario para os plugins Javascript do Bootstrap) -->
+  <script src="bootstrap/js/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

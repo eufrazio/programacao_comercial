@@ -124,5 +124,7 @@ DATE_INPUT_FORMATS = ('%d/%m/%Y',)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (BASE_DIR.child('static'),)
+STATICFILES_DIRS = (BASE_DIR.child('static'),
+    "/home/eufrazio/Documentos/ProgramacaoComercial/virtual/sysata/base/static",
+    "/home/eufrazio/Documentos/ProgramacaoComercial/virtual/sysata/acesso/static",)
 STATIC_ROOT = BASE_DIR.parent.child('static')
