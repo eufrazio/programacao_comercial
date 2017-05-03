@@ -1,0 +1,29 @@
+{% extends "base/index.html" %}
+{% load bootstrap3 %}
+
+{% block title %} <title> Editar Participante </title> {% endblock title %}
+
+{% block content %}
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">Editar Participantes</div>
+		<div class="panel-body">
+
+			<!--<div class="container">
+				<h4>Editar Participantes</h4>
+			</div>-->
+
+			<form class="form col-sm-8" action="/pessoa/{{ object.pk }}/" method="post">
+			{% csrf_token %}
+			{% bootstrap_form form %}
+			
+			{% buttons %}
+				<button type="submit" class="btn btn-primary">{% bootstrap_icon "save" %} Alterar
+				</button>
+			{% endbuttons %}
+
+			</form>
+		</div>
+	</div>
+
+{% endblock content %}

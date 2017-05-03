@@ -1,0 +1,28 @@
+{% extends "base/index.html" %}
+{% load bootstrap3 %}
+
+{% block title %} <title> Excluir Participante </title> {% endblock title %}
+
+{% block content %}
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Excluir Participantes</div>
+	
+	<div class="panel-body">
+
+		<form action="/pessoa/excluir/{{ object.pk }}/" method="post">
+			{% csrf_token %}
+			<p>
+			Tem certeza que deseja excluir o participante "{{ object }}" ?
+			</p>
+			{% buttons %}
+				<button type="submit" class="btn btn-danger">{% bootstrap_icon "remove" %} Excluir
+				</button>
+			{% endbuttons %}
+
+		</form>
+
+	</div>
+
+</div>
+{% endblock content %}

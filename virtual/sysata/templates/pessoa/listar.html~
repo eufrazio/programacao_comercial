@@ -1,0 +1,19 @@
+{% extends "base/index.html" %}
+{% load bootstrap3 %}
+
+{% block title %} <title> Participantes </title> {% endblock %}
+
+  {% block content %}
+
+  <h3>Lista de Participantes</h3>
+
+  <ul>
+      
+      {% for participante in object_list %}
+        <li>
+         {{ participante }}
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endblock content %}
