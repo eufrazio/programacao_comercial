@@ -14,3 +14,17 @@ class Pessoa(models.Model):
 
 	def __str__(self):
 		return '{0} - {1} ({2}/{3})'.format(self.nome, self.email, self.telefone, self.departamento)
+
+class Convocacao(models.Model):
+	presidente = models.ForeignKey("Pessoa", related_name='pessoa_presidente')
+	secretario = models.ForeignKey("Pessoa", related_name='pessoa_secretario', default='')
+	data_convocacao = models.DateTimeField(auto_now=False, auto_now_add=False)
+	tema = models.CharField(max_length=100)
+	pauta = models.TextField(default='')
+	convocados = models.ManyToManyField("Pessoa")
+
+	class Meta:
+		verbose_name_plural = "Convocacoes"
+
+	def __str__(self):
+		return '{0} - {1} - {2}'.format(self.presidente, self.data_convocacao, self.tema)

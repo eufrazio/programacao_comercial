@@ -13,13 +13,35 @@
         <h3>Lista de Participantes</h3>
       </div>-->
 
-        <ul>
+<table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Departamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for participante in object_list %}
+          <tr>
+            <td>{{ participante.nome}}</td>
+            <td>{{ participante.cpf}}</td>
+            <td>{{ participante.telefone}}</td>
+            <td>{{ participante.email}}</td>
+            <td>{{ participante.departamento}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+        <!-- <ul>
           {% for participante in object_list %}
             <li>
                {{ participante.pk }} {{ participante }}
             </li>
           {% endfor %}
-        </ul>
+        </ul> -->
     </div>
   </div>
 {% endblock content %}

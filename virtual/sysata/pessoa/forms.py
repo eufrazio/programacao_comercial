@@ -9,3 +9,11 @@ class FormularioPessoa(forms.ModelForm):
 	class Meta:
 		model = Pessoa
 		exclude = []
+
+class FormularioConvocacao(forms.ModelForm):
+	"""
+	Formulario para o model Convocacao
+	"""
+	class Meta:
+		model = Convocacao
+		exclude = []

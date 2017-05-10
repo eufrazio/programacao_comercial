@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 from pessoa.forms import *
 from pessoa.models import *
 
+#Classe Pessoa
 class PessoaList(ListView):
 	"""
 	View para listar participantes cadastrados.
@@ -36,3 +37,38 @@ class PessoaDelete(DeleteView):
 	model = Pessoa
 	template_name = 'pessoa/deletar.html'
 	success_url = reverse_lazy('listar-participantes')
+
+
+#Classe Convocacao
+class ConvocacaoList(ListView):
+	"""
+	View para listar convocacoes cadastradas.
+	"""
+	model = Convocacao
+	template_name = 'pessoa/listarconvocacao.html'
+
+class ConvocacaoNew(CreateView):
+	"""
+	View para a criação de novas convocacoes.
+	"""
+	model = Convocacao
+	form_class = FormularioConvocacao
+	template_name = 'pessoa/novaconvocacao.html'
+	success_url = reverse_lazy('listar-convocacoes')
+
+class ConvocacaoEdit(UpdateView):
+	"""
+	View para a edição de participantes já cadastrados.
+	"""
+	model = Convocacao
+	form_class = FormularioConvocacao
+	template_name = 'pessoa/editarconvocacao.html'
+	success_url = reverse_lazy('listar-convocacoes')
+
+class ConvocacaoDelete(DeleteView):
+	"""
+	View para a exclusão de convocacoes.
+	"""
+	model = Convocacao
+	template_name = 'pessoa/deletarconvocacao.html'
+	success_url = reverse_lazy('listar-convocacoes')

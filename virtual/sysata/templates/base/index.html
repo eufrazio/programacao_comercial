@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="ICON" type="x-icon" href="{% static '/bootstrap/img/atas-logo.png'%}">
+    <link rel="ICON" type="x-icon" href="{% static '/bootstrap/img/atas-png.png'%}">
     <meta name="author" content="">
 
     {% block title %} <title>Atas</title>{% endblock %}
@@ -83,6 +83,8 @@
 				  <ul class="dropdown-menu">
 					<li><a href="{% url 'listar-participantes' %}">Listar Participantes</a></li>
 					<li><a href="{% url 'novo-participante' %}">Cadastrar Participante</a></li>
+					<li><a href="{% url 'listar-convocacoes' %}">Listar Convocações</a></li>
+					<li><a href="{% url 'nova-convocacao' %}">Cadastrar Convocação</a></li>
 					<li><a href="#">Alterar Participante</a></li>
 				  </ul>
 				</li>
@@ -112,7 +114,7 @@
 </div>
 
 
-	<!-- Core JavaScript Files -->]
+	<!-- Core JavaScript Files -->
 	<script src="{% static '/bootstrap/js/jquery.js' %}"></script>
     <script src="{% static '/bootstrap/js/jquery.min.js' %}"></script>	 
     <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>

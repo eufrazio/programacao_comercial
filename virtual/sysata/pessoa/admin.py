@@ -8,4 +8,11 @@ class PessoaAdmin(admin.ModelAdmin):
 	list_display = ['nome', 'cpf', 'telefone', 'email', 'departamento']
 	search_fields = ['nome', 'cpf']
 	list_filter = ['cpf']
+
+class ConvocacaoAdmin(admin.ModelAdmin):
+	pass
+
 admin.site.register(Pessoa, PessoaAdmin)
+admin.site.register(Convocacao, ConvocacaoAdmin)
+
+

@@ -128,3 +128,13 @@ STATICFILES_DIRS = (BASE_DIR.child('static'),
     "/home/eufrazio/Documentos/ProgramacaoComercial/virtual/sysata/base/static",
     "/home/eufrazio/Documentos/ProgramacaoComercial/virtual/sysata/acesso/static",)
 STATIC_ROOT = BASE_DIR.parent.child('static')
+
+
+#Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Name <eufrazius@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'eufrazius@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 465
