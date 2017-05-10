@@ -16,6 +16,7 @@
         <thead>
           <tr>
             <th>Presidente</th>
+            <th>Secretário</th>
             <th>Data de Convocação</th>
             <th>Tema</th>
           </tr>
@@ -23,7 +24,8 @@
         <tbody>
           {% for convocado in object_list %}
           <tr>
-            <td>{{ convocado.presidente.nome}}</td>
+            <td><a href="/pessoa/editarconvocacao/{{ convocado.pk }}/"> {{ convocado.presidente.nome}}</a></td>
+            <td>{{ convocado.secretario.nome}}</td>
             <td>{{ convocado.data_convocacao}}</td>
             <td>{{ convocado.tema}}</td>
           </tr>

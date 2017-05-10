@@ -6,14 +6,14 @@
 {% block content %}
 
 	<div class="panel panel-primary">
-		<div class="panel-heading">Editar Participantes</div>
+		<div class="panel-heading"><strong>Editar Participantes</strong></div>
 		<div class="panel-body">
 
 			<!--<div class="container">
 				<h4>Editar Participantes</h4>
 			</div>-->
 
-			<form class="form col-sm-8" action="/pessoa/{{ object.pk }}/" method="post">
+			<form class="form col-sm-8" action="/pessoa/editar/{{ object.pk }}/" method="post">
 			{% csrf_token %}
 			{% bootstrap_form form %}
 			

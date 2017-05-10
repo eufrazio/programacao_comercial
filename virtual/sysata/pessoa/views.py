@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
+from django.core.mail import send_mail
+from django.conf import settings
 from pessoa.forms import *
 from pessoa.models import *
 
@@ -55,6 +57,13 @@ class ConvocacaoNew(CreateView):
 	form_class = FormularioConvocacao
 	template_name = 'pessoa/novaconvocacao.html'
 	success_url = reverse_lazy('listar-convocacoes')
+
+	#Função para envio de e-mails
+	def send_mail(self):
+		for convocado in Convocacao.objects.all():
+			send_mail(convocado.tema, convocado.pauta, settings.DEFAULT_FROM_EMAIL, convocado.email)
+			# send_mail(subject, message, from_email, user.Email)
+	#CONFIGURAR ESSA FUNCAOsend_mail()
 
 class ConvocacaoEdit(UpdateView):
 	"""
