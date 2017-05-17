@@ -10,4 +10,8 @@ urlpatterns = [
 	url(r'^novaconvocacao/$', views.ConvocacaoNew.as_view(), name='nova-convocacao'),
 	url(r'^editarconvocacao/(?P<pk>[0-9]+)/$', views.ConvocacaoEdit.as_view(), name='editar-convocacao'),
 	url(r'^excluirconvocacao/(?P<pk>[0-9]+)/$', views.ConvocacaoDelete.as_view(), name='deletar-convocacao'),
+	url(r'^listarmembro/$', views.MembroList.as_view(), name='listar-membros'),
+	url(r'^novomembro/$', views.MembroNew.as_view(), name='novo-membro'),
+	url(r'^editarmembro/(?P<pk>[0-9]+)/$', views.MembroEdit.as_view(), name='editar-membro'),
+	url(r'^excluirmembro/(?P<pk>[0-9]+)/$', views.MembroDelete.as_view(), name='deletar-membro'),
 ]

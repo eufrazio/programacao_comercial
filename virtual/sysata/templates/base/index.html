@@ -74,18 +74,25 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			  <ul class="nav navbar-nav">
-				<li><a href="/login/">Reuniões</a></li>
-				<li><a href="/login/">Atas</a></li>
-				<li><a href="/login/">Relatórios</a></li>
-				<li><a href="/login/">Arquivos</a></li>
 				<li class="dropdown">
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gerenciar <b class="caret"></b></a>
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pessoas </a>
 				  <ul class="dropdown-menu">
+				  	<li><a href="{% url 'novo-participante' %}">Cadastrar Participante</a></li>
 					<li><a href="{% url 'listar-participantes' %}">Listar Participantes</a></li>
-					<li><a href="{% url 'novo-participante' %}">Cadastrar Participante</a></li>
-					<li><a href="{% url 'listar-convocacoes' %}">Listar Convocações</a></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Convocação </a>
+				  <ul class="dropdown-menu">
 					<li><a href="{% url 'nova-convocacao' %}">Cadastrar Convocação</a></li>
-					<li><a href="#">Alterar Participante</a></li>
+					<li><a href="{% url 'listar-convocacoes' %}">Listar Convocações</a></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Membro </a>
+				  <ul class="dropdown-menu">
+					<li><a href="{% url 'novo-membro' %}">Cadastrar Membro</a></li>
+					<li><a href="{% url 'listar-membros' %}">Listar Membros</a></li>
 				  </ul>
 				</li>
 			  </ul>

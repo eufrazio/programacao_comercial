@@ -16,8 +16,11 @@
 			Tem certeza que deseja excluir a convocacao "{{ object }}" ?
 			</p>
 			{% buttons %}
-				<button type="submit" class="btn btn-danger">{% bootstrap_icon "remove" %} Excluir
+				<button type="submit" class="btn btn-danger">{% bootstrap_icon "remove" %} Sim
 				</button>
+
+				<!-- Botão para retornar à página!-->
+				<a href="/pessoa/editarconvocacao/{{ object.pk }}/" class="btn btn-info">{% bootstrap_icon "arrow-left" %} Retornar</a>
 			{% endbuttons %}
 
 		</form>

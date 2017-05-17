@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'sysata.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'sysata',
+		'NAME': 'ata',
 		'USER': 'postgres',
 		'PASSWORD': 'postgres',
 		'HOST': '127.0.0.1',

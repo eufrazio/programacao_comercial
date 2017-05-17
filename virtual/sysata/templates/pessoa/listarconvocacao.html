@@ -15,19 +15,19 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Presidente</th>
-            <th>Secretário</th>
-            <th>Data de Convocação</th>
             <th>Tema</th>
+            <th>Data de Convocação</th>
+            <th>Pautas</th>
+            <th>Convocados</th>
           </tr>
         </thead>
         <tbody>
           {% for convocado in object_list %}
           <tr>
-            <td><a href="/pessoa/editarconvocacao/{{ convocado.pk }}/"> {{ convocado.presidente.nome}}</a></td>
-            <td>{{ convocado.secretario.nome}}</td>
+            <td><a href="/pessoa/editarconvocacao/{{ convocado.pk }}/"> {{ convocado.tema}}</a></td>
             <td>{{ convocado.data_convocacao}}</td>
-            <td>{{ convocado.tema}}</td>
+            <td>{{ convocado.pauta}}</td>
+            <td>{{ convocado.convocados.all}}</td>
           </tr>
           {% endfor %}
         </tbody>

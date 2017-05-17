@@ -14,8 +14,15 @@
 			</div>-->
 
 			<form class="form col-sm-8" action="/pessoa/novaconvocacao/" method="post">
+
+			<!--<form action="/your-name/" method="post" enctype="multipart/form-data">-->
+
 				{% csrf_token %}
-				{% bootstrap_form form %}
+				<!--{% bootstrap_form form exclude=convocados %}--> <!--todos os fields do form no estilo bootstrap-->
+				{% bootstrap_form form %} <!--todos os fields do form no estilo bootstrap-->
+				<!--{% bootstrap_field form.tema %}
+				{% bootstrap_field form.data_convocacao %}
+				{% bootstrap_field form.pauta %}-->
 
 				{% buttons %}
 					<button type="submit" class="btn btn-primary">{% bootstrap_icon "save" %} Salvar

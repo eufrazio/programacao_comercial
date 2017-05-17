@@ -16,4 +16,12 @@ class FormularioConvocacao(forms.ModelForm):
 	"""
 	class Meta:
 		model = Convocacao
+		exclude = ['convocados',]
+
+class FormularioMembro(forms.ModelForm):
+	"""
+	Formulario para o model Membro
+	"""
+	class Meta:
+		model = Membro
 		exclude = []

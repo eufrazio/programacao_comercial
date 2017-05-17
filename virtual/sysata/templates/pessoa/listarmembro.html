@@ -1,0 +1,46 @@
+{% extends "base/index.html" %}
+{% load bootstrap3 %}
+
+{% block title %} <title> Membros </title> {% endblock %}
+
+{% block content %}
+
+  <div class="panel panel-primary">
+    <div class="panel-heading"><strong>Lista de Membros</strong></div>
+    <div class="panel-body">
+
+      <!--<div class="container">
+        <h3>Lista de Membros</h3>
+      </div>-->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Participação</th>
+            <th>Data</th>
+            <th>Tema</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for membro in object_list %}
+          <tr>
+            <td><a href="/pessoa/editarmembro/{{ membro.pk }}/"> {{ membro.nome_pessoa.nome}}</a></td>
+            <td>{{ membro.get_participacao_display}}</td>
+            <td>{{ membro.data_membro}}</td>
+            <td>{{ membro.tema_convocacao.tema}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+
+        <!-- <ul>
+          {% for membro in object_list %}
+            <li>
+               {{ membro.pk }} {{ membro }}
+            </li>
+          {% endfor %}
+        </ul> -->
+      </table>
+    </div>
+  </div>
+{% endblock content %}
